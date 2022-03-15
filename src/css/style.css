@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --border-card: .4rem;
+    --border-button: 1.6rem;
+
+    --box-img-mobile-width: 100%;
+    --box-img-mobile-height: 280px;
+    --box-img-desktop-width: 100%;
+    --box-img-desktop-height: 140px;
+
+    --break-mobile: 210px;
+    --break-desktop: 1440px;
+
+    --card-mobile-width: 250px;
+    --card-mobile-heigth: 845px;
+    --card-desktop-width: 57.4rem;
+    --card-desktop-height: 31.4rem;
+
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+    /** paragraphs */
+    --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+    /** backgournd, headings, buttons */
+    --color-light-gray: hsl(0, 0%, 95%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-attribution: hsl(228, 45%, 44%);
+
+    --font-size: 15px;
+    --font-size-attribution: .8rem;
+    --font-base: 'Lexend Deca', sans-serif;
+    --font-display: 'Big Shoulders Display', cursive;
+    --font-weight-400: 400;
+    --font-weight-700: 700;
+
+    --max-mobile-width: --break-mobile;
+    --min-mobile-height: 97vh;
+    --max-desktop-width: --break-desktop;
+    --min-desktop-height: 97vh;
+
+    --plan-list-avatar-height: 3rem;
+    --plan-list-avatar-width: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--font-size);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: var(--max-desktop-width);
+    min-height: var(--min-desktop-height);
+    padding: 0;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: var(--card-mobile-heigth);
+    justify-content: center;
+    margin: 0 auto;
+    animation-duration: 100ms;
+    transition: 0.3s ease-in;
+    width: var(--card-mobile-width);
+}
+
+.card .box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: var(--box-img-mobile-height);
+    width: var(--box-img-mobile-width);
+    position: relative;
+    animation-duration: 100ms;
+    transition: 0.3s ease-in;
+}
+
+/** Section box sedans */
+.card .box .box-sedans {
+    background-color: var(--color-bright-orange);
+    border-top-left-radius: var(--border-card);
+    border-top-right-radius: var(--border-card);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 2rem;
+    height: 100%;
+}
+
+.card .box .box-sedans .box-title {
+    font-family: var(--font-display);
+    color: var(--color-light-gray);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 1.4rem;
+}
+
+
+.card .box .box-sedans .box-content p {
+    color: var(--color-transparent-white);
+    font-size: x-small;
+    margin-top: 1.2rem;
+    line-height: 1.6;
+}
+
+.card .box .box-sedans .box-sedans-img {
+    background-image: url('../images/icon-sedans.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 2.5rem;
+    position: relative;
+    width: 2.5rem;
+    z-index: 3;
+}
+
+.card .box .box-sedans .box-action {
+    color: var(--color-text-paragraph);
+    display: flex;
+    flex-direction: column;
+    margin: 1.8rem 1.4rem 0 0;
+    width: 7rem;
+}
+
+.card .box .box-sedans .box-action .action-button {
+    background-color: var(--color-light-gray);
+    border-radius: var(--border-button);
+    display: block;
+    color: var(--color-bright-orange);
+    cursor: pointer;
+    min-width: 100%;
+    height: 2rem;
+    text-decoration: none;
+    text-align: center;
+    animation-duration: 100ms;
+    transition: 0.3s ease-in;
+    border: 1px solid var(--color-white);
+}
+
+.card .box .box-sedans .box-action .action-button:hover {
+    border-color: var(--color-very-pale-blue);
+}
+
+/** Section suvs */
+.card .box .box-suvs {
+    background-color: var(--color-dark-cyan);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 2rem;
+    height: 100%;
+}
+
+.card .box .box-suvs .box-title {
+    font-family: var(--font-display);
+    color: var(--color-light-gray);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 1.4rem;
+}
+
+.card .box .box-suvs .box-content p {
+    color: var(--color-transparent-white);
+    font-size: x-small;
+    margin-top: .9rem;
+    line-height: 1.6;
+}
+
+.card .box .box-suvs .box-suvs-img {
+    background-image: url('../images/icon-suvs.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 2.5rem;
+    position: relative;
+    width: 2.5rem;
+    z-index: 3;
+}
+
+.card .box .box-suvs .box-action {
+    color: var(--color-text-paragraph);
+    display: flex;
+    flex-direction: column;
+    margin: 1.8rem 1.4rem 0 0;
+    width: 7rem;
+}
+
+.card .box .box-suvs .box-action .action-button {
+    background-color: var(--color-light-gray);
+    border-radius: var(--border-button);
+    display: block;
+    color: var(--color-dark-cyan);
+    cursor: pointer;
+    min-width: 100%;
+    height: 2rem;
+    text-decoration: none;
+    text-align: center;
+    animation-duration: 100ms;
+    transition: 0.3s ease-in;
+    border: 1px solid var(--color-white);
+}
+
+.card .box .box-suvs .box-action .action-button:hover {
+    border-color: var(--color-dark-cyan);
+}
+
+/** Section luxury */
+.card .box .box-luxury {
+    background-color: var(--color-very-dark-cyan);
+    border-bottom-left-radius: var(--border-card);
+    border-bottom-right-radius: var(--border-card);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 2rem;
+    height: 100%;
+}
+
+.card .box .box-luxury .box-title {
+    font-family: var(--font-display);
+    color: var(--color-light-gray);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 1.4rem;
+}
+
+.card .box .box-luxury .box-content p {
+    color: var(--color-transparent-white);
+    font-size: x-small;
+    margin-top: .9rem;
+    line-height: 1.6;
+}
+
+.card .box .box-luxury .box-luxury-img {
+    background-image: url('../images/icon-luxury.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 2.5rem;
+    position: relative;
+    width: 2.5rem;
+    z-index: 3;
+}
+
+.card .box .box-luxury .box-action {
+    color: var(--color-text-paragraph);
+    display: flex;
+    flex-direction: column;
+    margin: 1.8rem 1.4rem 0 0;
+    width: 7rem;
+}
+
+.card .box .box-luxury .box-action .action-button {
+    background-color: var(--color-light-gray);
+    border: 1px solid #eeeff4;
+    border-radius: var(--border-button);
+    display: block;
+    color: var(--color-very-dark-cyan);
+    cursor: pointer;
+    min-width: 100%;
+    height: 2rem;
+    text-decoration: none;
+    text-align: center;
+    animation-duration: 100ms;
+    transition: 0.3s ease-in;
+    border: 1px solid var(--color-white);
+}
+
+.card .box .box-luxury .box-action .action-button:hover {
+    border-color: var(--color-very-dark-cyan);
+}
+
+footer .attribution {
+    color: var(--color-text-paragraph);
+}
+
+footer .attribution {
+    font-size: .8rem;
+    text-align: center;
+}
+
+footer .attribution a {
+    color: var(--color-attribution);
+}
+
+
+@media only screen and (min-width: 985px) {
+    .card {
+        flex-direction: row;
+        height: var(--card-desktop-height);
+        width: var(--card-desktop-width);
+    }
+
+    .card .box {
+        height: var(--card-desktop-height);
+    }
+
+    /** Section box sedan */
+    .card .box .box-sedans {
+        border-top-left-radius: var(--border-card);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: var(--border-card);
+        border-bottom-right-radius: 0;
+        padding: 3rem;
+    }
+
+    .card .box .box-sedans .box-title {
+        font-size: x-large;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        margin-top: .5rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .card .box .box-sedans .box-content {
+        margin-top: .9rem;
+        padding-right: 2rem;
+    }
+
+    .card .box .box-sedans .box-content p {
+        font-size: small;
+        line-height: 1.9;
+    }
+
+    .card .box .box-sedans .box-sedans-img {
+        height: 3.6rem;
+        width: 3.6rem;
+    }
+
+    .card .box .box-sedans .box-action {
+        /* color: var(--color-text-paragraph);
+        display: flex;
+        flex-direction: column; */
+        margin: 1.4rem 1.4rem 0 0;
+        width: 9rem;
+        margin-top: 5.5rem;
+    }
+
+    .card .box .box-sedans .box-action .action-button {
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-base);
+        height: 3rem;
+    }
+
+    /** Section suvs */
+    .card .box .box-suvs {
+        padding: 3rem;
+    }
+
+    .card .box .box-suvs .box-title {
+        font-size: x-large;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        margin-top: .5rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .card .box .box-suvs .box-content {
+        margin-top: .9rem;
+        padding-right: 2rem;
+    }
+
+    .card .box .box-suvs .box-content p {
+        font-size: small;
+        line-height: 1.9;
+    }
+
+    .card .box .box-suvs .box-suvs-img {
+        height: 3.6rem;
+        width: 3.6rem;
+    }
+
+    .card .box .box-suvs .box-action {
+        margin: 1.4rem 1.4rem 0 0;
+        width: 9rem;
+        margin-top: 5.5rem;
+    }
+
+    .card .box .box-suvs .box-action .action-button {
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-base);
+        height: 3rem;
+    }
+
+    /** Section luxury */
+    .card .box .box-luxury {
+        border-top-left-radius: 0;
+        border-top-right-radius: var(--border-card);
+        border-bottom-right-radius: var(--border-card);
+        border-bottom-left-radius: 0;
+        padding: 3rem;
+    }
+
+    .card .box .box-luxury .box-title {
+        font-size: x-large;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        margin-top: .5rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .card .box .box-luxury .box-content {
+        margin-top: .9rem;
+        padding-right: 2rem;
+    }
+
+    .card .box .box-luxury .box-content p {
+        font-size: small;
+        line-height: 1.9;
+    }
+
+    .card .box .box-luxury .box-luxury-img {
+        height: 3.6rem;
+        width: 3.6rem;
+    }
+
+    .card .box .box-luxury .box-action {
+        margin: 1.4rem 1.4rem 0 0;
+        width: 9rem;
+        margin-top: 5.5rem;
+    }
+
+    .card .box .box-luxury .box-action .action-button {
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-base);
+        height: 3rem;
+    }
+}
