@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/ikreuz](https://github.com/ikreuz/3-column-preview-card-challenge)
-- Live Site URL: []()
+- Live Site URL: [https://vercel.com](https://3-column-preview-card-challenge-seven.vercel.app/)
 
 ## My process
 
